@@ -112,8 +112,8 @@ def connection():
 
 app.config['MAIL_SERVER']='smtp.gmail.com'
 app.config['MAIL_PORT'] = 465
-app.config['MAIL_USERNAME'] = 'pwp5deepblue@gmail.com'
-app.config['MAIL_PASSWORD'] = 'pwp@2329'
+app.config['MAIL_USERNAME'] = 'aditi06sh@gmail.com'
+app.config['MAIL_PASSWORD'] = 'Adsh@2329'
 app.config['MAIL_USE_TLS'] = False
 app.config['MAIL_USE_SSL'] = True
 
@@ -287,10 +287,10 @@ def uploadImage():
 @app.route("/")
 def send_mail():
 
-	msg = Message('Hello', sender = 'pwp5deepblue@gmail.com', recipients = ['phoenix32h@gmail.com'])
+	msg = Message('Hello', sender = 'aditi06sh@gmail.com', recipients = ['phoenix32h@gmail.com'])
 	msg.body = "Hello "
-	with app.open_resource("C:/Users/HP/Desktop/models-master/research/object_detection/PWP webapp/static/img/brand_graph.png") as fp:
-		msg.attach("brand_graph.png", "image/png", fp.read())
+	with app.open_resource("C:/Users/HP/Desktop/models-master/research/object_detection/PWP webapp/static/img/brand_graph2.png") as fp:
+		msg.attach("brand_graph2.png", "image/png", fp.read())
 	mail.send(msg)
 	return render_template('mail_ack.html')
 
