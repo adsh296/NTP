@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+
+	<style>
+		#t1{
+			color: black;
+			font-size: 20px;
+			font-family: 'Comic Sans MS', cursive, sans-serif;
+
+		}
+		#bg{
+			 background-image: url("/static/img/b1.png");
+			 background-repeat: no-repeat;
+    		 background-size: cover;
+		}
+		.square_btn{
+		    display: inline-block;
+		    padding: 0.5em 1em;
+		    text-decoration: none;
+		    border-radius: 0px;
+		    font-weight: bold;
+		    color: #FFF;
+		    background-image: -webkit-linear-gradient(45deg, #709dff 0%, #000000 100%);
+		    background-image: linear-gradient(45deg, #709dff 0%, #000111 100%);
+		    transition: .4s;
+		}
+
+		.square_btn:hover{
+		    background-image: -webkit-linear-gradient(45deg, #709dff 50%, #000000 100%);
+		    background-image: linear-gradient(45deg, #709dff 50%, #000111 100%);
+		}
+	</style>
+</head>
+<body id="bg">
+	<center>
+		<!--<h1 style="color:#B8FF33;font-family:'Comic Sans MS', cursive, sans-serif;text-align: center;">NO! To Plastic</h1>-->
+		<img src='/static/img/ntp-logo2.png' height="200" width="500">
+		<div>
+			<form action="{{ url_for('savepost') }}" method="post">
+			<h3 id="t1">Enter your name:<input type="text" name="user" autocomplete="off" autofocus="True" required="True"></h3>
+			<input class="square_btn" type="submit" name="submit" value="Submit">
+			</form>
+		</div>
+	</center>
+	
+</body>
+</html>
