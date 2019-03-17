@@ -35,6 +35,8 @@ This project focuses on detecting plastic packages from litter and predicting th
 
 3. Here you need to enter the user name 
 
+![2](https://user-images.githubusercontent.com/48627530/54487732-68759300-48bf-11e9-8385-7883c59f95a3.JPG)
+
 4. Then you need to upload the image and you can see that it starts detecting brands 
 
 5. Also you can view the statistics just to see the percentage of each brand location wise 
