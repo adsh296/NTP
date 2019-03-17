@@ -63,6 +63,8 @@ The screenshots of the app can be found below.
 
 ![Screenshot_2019-03-17-15-03-02-818_com adsh notoplastic](https://user-images.githubusercontent.com/48627530/54488456-00777a80-48c8-11e9-8e68-ac85904c33a1.png)
 
+![Screenshot_2019-03-17-14-29-49-017_com adsh notoplastic](https://user-images.githubusercontent.com/48627530/54488517-93181980-48c8-11e9-9ed4-78da54330eb0.png)
+
 
 
 # Authors:
