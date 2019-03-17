@@ -26,11 +26,11 @@ This project focuses on detecting plastic packages from litter and predicting th
 
 # How to get it working:
 
-1. To run the webapp just go to cmd and run python custom_flask.py
+1. To run the webapp just go to cmd and run python ntpFinal.py
 
 2. Just copy paste the localhost http://127.0.0.1:5000/ and you can see the following page 
 
-3. Here you need to enter the user name and password 
+3. Here you need to enter the user name 
 
 4. Then you need to upload the image and you can see that it starts detecting brands 
 
