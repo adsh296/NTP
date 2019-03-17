@@ -1,0 +1,244 @@
+ 
+<html>
+
+<head>
+  <?php
+    $latit1 = $_POST['num1'];
+    $longit1 = $_POST['num2'];
+    // $latit2 = $_POST['num11'];
+    // $longit2 = $_POST['num21'];
+  // $latit212 = $_POST['num212'];
+  //   $longit213 = $_POST['num213'];
+
+?>
+    
+    <style type="text/css">
+    html,
+body,
+/*#map-canvas {
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  padding: 0px
+}*/
+#map-canvas {
+        height: 80%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      /*#floating-panel {
+        position: absolute;
+        top: 10px;
+        left: 25%;
+        z-index: 5;
+        background-color: #fff;
+        padding: 5px;
+        border: 1px solid #999;
+        text-align: center;
+        font-family: 'Roboto','sans-serif';
+        line-height: 30px;
+        padding-left: 10px;
+      }
+      #floating-panel {
+        margin-left: -52px;
+      }*/
+
+</style>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAwC-HuctyJNkVPhpGKIx81XrD0FrpZl00&libraries=places"></script>
+</head>
+<body background="main.jpg">
+<div id="floating-panel">
+     <!--  <button id="drop" onclick="drop()">show bus stop</button> -->
+    </div>
+<div id="map-canvas"></div>
+<!-- <button id="get">get direction </button>
+      <button id="drop" onclick="drop()">show bus stop</button> -->
+
+</body>
+<script>
+   var markers = [];
+var lat1="<?php echo $latit1 ?>";
+var long1="<?php echo $longit1 ?>";
+// 
+// 
+
+
+// document.write(lat1);
+// document.write(long1);
+
+// document.write(lat2);
+
+// document.write(long2);
+
+    var queryString = decodeURIComponent(window.location.search);
+
+    queryString = queryString.substring(1);
+    // document.write("<br></br>")
+    // document.write(queryString);
+var queries = queryString.split("&");
+//document.write(queries);
+ // var latitude=queries[0].substring(6);
+ // var longitude=queries[1].substring(6);
+
+   var x1=parseFloat(lat1);
+         var y1=parseFloat(long1);
+
+         // var x2=parseFloat(lat2);
+         // var y2=parseFloat(long2);
+         // var x=parseFloat(la);
+         // var y=
+var directionsDisplay=new google.maps.DirectionsRenderer();
+var  directionsService = new google.maps.DirectionsService();
+var map;
+var baudha=new google.maps.LatLng(x1,y1);
+var hattisar=new google.maps.LatLng(18.990515, 73.127627);
+ var hattisar_new=new google.maps.LatLng(x1,y1);
+
+var comp_lat=18.988827;
+var comp_long=73.126229;
+
+
+var maruthi=new google.maps.LatLng(18.988076, 73.125478);
+
+var sp=new google.maps.LatLng(18.988827, 73.126229);
+
+var ganesh=new google.maps.LatLng(18.989294, 73.127162);
+
+var baapdev=new google.maps.LatLng(18.990116, 73.127312);
+
+var hattisar6=new google.maps.LatLng(comp_lat, comp_long);
+var neighborhoods = [
+        {lat:18.988827, lng: 73.126229},
+        {lat:18.989294, lng: 73.127162},
+        {lat:18.988076, lng: 73.125478},
+        {lat: 18.990116, lng:  73.127312}
+      ];
+// if(lat1==comp_lat && long1==comp_long)
+// {
+//     window.alert("sucess fully reached Bappdev temple");
+// }
+// else
+// {
+//         window.alert("not reached bappdev temple");
+       //window.open('mailto:sumeshshetty619@gmail.com?subject=subject&body=body');
+
+//        <?php
+//     // Account details
+//     $apiKey1 = urlencode('DJrVVv1JGr0-zm91vcz3uxfTEDAmsPqQdo5io32lZj');
+    
+//     // Message details
+//     $numbers = array(9167566030);
+//     $sender = urlencode('TXTLCL');
+//     $message = rawurlencode('your bus has reached deviated from original route');
+ 
+//     $numbers = implode(',', $numbers);
+ 
+//     // Prepare data for POST request
+//     $data = array('apikey' => $apiKey1, 'numbers' => $numbers, "sender" => $sender, "message" => $message);
+ 
+//     // Send the POST request with cURL
+//     $ch = curl_init('https://api.textlocal.in/send/');
+//     curl_setopt($ch, CURLOPT_POST, true);
+//     curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+//     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+//     $response = curl_exec($ch);
+//     curl_close($ch);
+    
+//     // Process your response here
+//     echo $response;
+// ?>
+
+// }
+
+var mapOptions = {
+                    zoom: 12,
+                    center: baudha
+                };
+
+                                map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+                directionsDisplay.setMap(map);
+
+
+  //               var marker = new google.maps.Marker({
+  //         position: maruthi,
+  //         map: map,
+  //         title: 'i m here'
+  //       });
+
+
+  //               var marker2 = new google.maps.Marker({
+  //         position: sp,
+  //         map: map,
+  //         title: 'i m here!'
+  //       });
+
+  // var marker3 = new google.maps.Marker({
+  //         position: ganesh,
+  //         map: map,
+  //         title: 'i m here !'
+  //       });
+  // var marker4 = new google.maps.Marker({
+  //         position: baapdev,
+  //         map: map,
+  //         title: 'i m here!',
+  //         //icon:"bus4.png"
+  //       });
+   var marker5 = new google.maps.Marker({
+          position:  hattisar_new,
+          map: map,
+          title: 'Hello World!',
+           
+        icon:"pls.png"
+        });
+
+
+function drop() {
+        clearMarkers();
+        for (var i = 0; i < neighborhoods.length; i++) {
+          addMarkerWithTimeout(neighborhoods[i], i * 200);
+        }
+      }
+function addMarkerWithTimeout(position, timeout) {
+        window.setTimeout(function() {
+          markers.push(new google.maps.Marker({
+            position: position,
+            map: map,
+            animation: google.maps.Animation.DROP
+          }));
+        }, timeout);
+      }
+
+      function clearMarkers() {
+        for (var i = 0; i < markers.length; i++) {
+          markers[i].setMap(null);
+        }
+        markers = [];
+      }
+function calcRoute() {
+
+
+var request={
+    origin:baudha,
+    destination:hattisar,
+    travelMode:'DRIVING'
+};
+
+                directionsService.route(request, function (request, status) {
+if(status==  "OK")  {
+    directionsDisplay.setDirections(request);
+}              });
+            }
+            document.getElementById('get').onclick=function(){
+                calcRoute();
+            };
+
+
+        
+    </script>
+
+
+</html>
