@@ -61,6 +61,10 @@ that image would be added to the train folder and the next time when model gets 
 We have integrated our model with a webapp and an Android application.
 The screenshots of the app can be found below.
 
+![Screenshot_2019-03-17-15-03-02-818_com adsh notoplastic](https://user-images.githubusercontent.com/48627530/54488456-00777a80-48c8-11e9-8e68-ac85904c33a1.png)
+
+
+
 # Authors:
 
 1.Aditi Sharma
