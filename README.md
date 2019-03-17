@@ -41,6 +41,8 @@ This project focuses on detecting plastic packages from litter and predicting th
 7. Also the user can give the feedback and if the feedback given by the user regarding the image is not what the prediction shows then 
 that image would be added to the train folder and the next time when model gets trained that image is included in the training
 
+
+
 # Integration:
 
 We have integrated our model with a webapp and an Android application.
