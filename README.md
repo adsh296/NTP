@@ -27,6 +27,7 @@ This project focuses on detecting plastic packages from litter and predicting th
 # How to get it working:
 
 1. To run the webapp just go to cmd and run python ntpFinal.py
+![1](https://user-images.githubusercontent.com/48627530/54487729-614e8500-48bf-11e9-892e-a300d0780db6.JPG)
 
 2. Just copy paste the localhost http://127.0.0.1:5000/ and you can see the following page 
 
